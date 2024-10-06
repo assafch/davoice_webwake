@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const webpack = require('webpack'); // Import the webpack module
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -8,6 +9,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js', // Output bundle
+  },
+  performance: {
+    hints: false,
   },
   module: {
     rules: [
@@ -47,6 +51,11 @@ module.exports = {
         },
       ],
     }),
+    new webpack.ContextReplacementPlugin(
+      /keyword-detection-web[\/\\]dist/,
+      path.resolve(__dirname, 'node_modules/keyword-detection-web/dist'),
+      {}
+    ), // Add the ContextReplacementPlugin
   ],
   resolve: {
     extensions: ['.js', '.jsx'], // Resolve .jsx files
