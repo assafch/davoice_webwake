@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -54,6 +55,8 @@ module.exports = {
     static: path.join(__dirname, 'dist'), // Serve the 'dist' folder
     compress: true,
     port: 8080, // Port for development server
+    https: true, // Enable HTTPS
+    historyApiFallback: true, // Redirect 404s to /index.html
   },
   mode: 'production',
 };
