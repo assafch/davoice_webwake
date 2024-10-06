@@ -7,7 +7,7 @@ const App = () => {
     const initKeywordDetection = async () => {
       // Optional: Validate license
       const licenseManager = new LicenseManager();
-      const licenseKey = 'YOUR_LICENSE_KEY';
+      const licenseKey = 'MTcyODkzOTYwMDAwMA==-Gy0+y3OCG32COKypi/mpT1AYrTlYAz/IvNt1WZ+gVsI=';
       const isLicensed = await licenseManager.isLicenseValid(licenseKey);
 
       if (!isLicensed) {

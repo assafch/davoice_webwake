@@ -1,5 +1,6 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.jsx', // Entry point for your React app
@@ -29,6 +30,10 @@ module.exports = {
     ],
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html', // Source HTML file
+      filename: 'index.html', // Output file in 'dist' directory
+    }),
     new CopyWebpackPlugin({
       patterns: [
         { from: 'models', to: 'models' }, // Copy models to 'dist/models'
@@ -49,7 +54,6 @@ module.exports = {
     static: path.join(__dirname, 'dist'), // Serve the 'dist' folder
     compress: true,
     port: 8080, // Port for development server
-    historyApiFallback: true,
   },
   mode: 'production',
 };
