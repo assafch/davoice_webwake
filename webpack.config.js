@@ -41,6 +41,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
+        { from: 'src/audio-worklet-processor.js', to: '[name][ext]' }, // Copy models to 'dist/models'
         { from: 'models', to: 'models' }, // Copy models to 'dist/models'
         {
           from: path.resolve(

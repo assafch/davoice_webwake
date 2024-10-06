@@ -1,8 +1,12 @@
-// src/App.jsx
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+//import { LicenseManager, KeywordDetector } from 'keyword-detection-web';
 
 const App = () => {
+  const [status, setStatus] = useState('Initializing...'); // State to handle the status text
+
   useEffect(() => {
+    let keywordDetector; // Define the detector outside so we can stop it on cleanup
+
     const initKeywordDetection = async () => {
       // Dynamically import 'keyword-detection-web'
       const { LicenseManager, KeywordDetector } = await import('keyword-detection-web');
@@ -14,6 +18,7 @@ const App = () => {
 
       if (!isLicensed) {
         alert('Invalid or expired license key.');
+        setStatus('Invalid or expired license key.');
         return;
       }
 
@@ -22,7 +27,6 @@ const App = () => {
       const bufferCount = 2;
       const modelsFolderPath = './models';
       const modelToUse = 'need_help_now.onnx';
-
 
       const onKeywordDetected = (detected) => {
         if (detected) {
@@ -33,7 +37,7 @@ const App = () => {
         }
       };
 
-      const keywordDetector = new KeywordDetector(
+      keywordDetector = new KeywordDetector(
         modelsFolderPath,
         modelToUse,
         threshold,
@@ -43,6 +47,7 @@ const App = () => {
 
       try {
         await keywordDetector.init();
+        setStatus(`Models loaded. Listening for keyword: ${modelToUse.replace(/\.onnx$/, '').replace(/_/g, ' ')}`);
         console.log(
           `Models loaded. Listening for keyword: ${modelToUse
             .replace(/\.onnx$/, '')
@@ -51,27 +56,28 @@ const App = () => {
 
         // Start listening for keywords
         keywordDetector.startListening();
+        console.log("After startListening()");
       } catch (error) {
         console.error('Initialization error:', error);
-        if (error.name === 'NotAllowedError') {
-          alert('Microphone access was denied.');
-        } else if (error.name === 'NotFoundError') {
-          alert('No microphone found.');
-        } else if (error.name === 'AbortError') {
-          alert('Microphone request was aborted.');
-        } else {
-          alert('An error occurred during initialization.');
-        }
+        setStatus('Error initializing keyword detector.');
       }
     };
 
+    // Initialize the keyword detection
     initKeywordDetection();
-  }, []);
+
+    // Cleanup: stop the keyword detector when the component unmounts
+    return () => {
+      if (keywordDetector) {
+        //keywordDetector.stopListening();
+      }
+    };
+  }, []); // Empty dependency array ensures the effect runs only once on mount
 
   return (
     <div>
       <h1>Keyword Detection App</h1>
-      <p id="status">Initializing...</p>
+      <p>{status}</p> {/* Display the status dynamically */}
     </div>
   );
 };
