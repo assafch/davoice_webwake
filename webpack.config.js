@@ -29,6 +29,13 @@ module.exports = {
         },
       },
       {
+        test: /\.css$/,
+        use: [
+          'style-loader', // Injects styles into the DOM
+          'css-loader',   // Parses CSS files
+        ],
+      },
+      {
         test: /\.wasm$/,
         type: 'webassembly/async',
       },

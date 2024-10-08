@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 //import { LicenseManager, KeywordDetector } from 'keyword-detection-web';
 
-const App = () => {
+const App = () => { 
   const [status, setStatus] = useState('Initializing...'); // State to handle the status text
 
   useEffect(() => {
