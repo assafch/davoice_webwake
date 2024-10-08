@@ -13,9 +13,10 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "keyword-detection-web": "^1.0.0",
-    "react": "^17.0.0",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.5",
     "react-bootstrap-icons": "^1.11.4",
-    "react-dom": "^17.0.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
