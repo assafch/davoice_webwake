@@ -1,4 +1,9 @@
 node_modules
 /dist
 bundle.js
-.DS_Store
+.DS_Storenode_modules
+dist/bundle.js
+dist/bundle.js.LICENSE.txt
+dist/bundle.js
+.gitignore
+package-lock.json
