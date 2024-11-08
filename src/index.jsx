@@ -12,10 +12,6 @@ import HeroSection from './components/HeroSection.js';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <AppNavbar />
-    <HeroSection />
-    <Container>
-        <Home />
-    </Container>
+    <App />
   </>
 );

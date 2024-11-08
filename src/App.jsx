@@ -13,7 +13,7 @@ const App = () => {
 
       // Optional: Validate license
       const licenseManager = new LicenseManager();
-      const licenseKey = 'MTcyODkzOTYwMDAwMA==-Gy0+y3OCG32COKypi/mpT1AYrTlYAz/IvNt1WZ+gVsI=';
+      const licenseKey = 'MTc2MTg2MTYwMDAwMA==-9Ast1trO/HOM6Gy0DyvVC8GIAuFj3lD+e4oY2m2si48=';
       const isLicensed = await licenseManager.isLicenseValid(licenseKey);
 
       if (!isLicensed) {
