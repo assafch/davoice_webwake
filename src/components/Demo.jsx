@@ -1,24 +1,29 @@
-// LanguageSelector.jsx
 import React, { useEffect, useState, useRef } from 'react';
 import { Mic } from 'lucide-react';
 
-function LanguageSelector() {
+function Demo() {
   const [status, setStatus] = useState('Initializing...');
   const [isListening, setIsListening] = useState(false);
   const [keywordDetected, setKeywordDetected] = useState(false);
   const [isReady, setIsReady] = useState(false);
+  const [selectedModel, setSelectedModel] = useState('need_help_now.onnx');
 
   const keywordDetectorRef = useRef(null);
+
+  // Helper function to format model name
+  const formatModelName = (fileName) => {
+    return fileName
+      .replace(/\.onnx$/, '') // Remove file extension
+      .replace(/_/g, ' ') // Replace underscores with spaces
+      .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize each word
+  };
 
   useEffect(() => {
     const initKeywordDetection = async () => {
       try {
-        // Dynamically import 'keyword-detection-web'
         const { LicenseManager, KeywordDetector } = await import('keyword-detection-web');
 
-        // Validate license
         const licenseManager = new LicenseManager();
-        console.log('LicenseManager: ', licenseManager);
         const licenseKey = 'MTc2MTg2MTYwMDAwMA==-9Ast1trO/HOM6Gy0DyvVC8GIAuFj3lD+e4oY2m2si48=';
         const isLicensed = await licenseManager.isLicenseValid(licenseKey);
 
@@ -28,51 +33,35 @@ function LanguageSelector() {
           return;
         }
 
-        // Initialize Keyword Detector
         const threshold = 0.9999;
         const bufferCount = 2;
         const modelsFolderPath = './models';
-        const modelToUse = 'need_help_now.onnx';
 
         const onKeywordDetected = (detected) => {
           if (detected) {
             console.log('Keyword detected!');
             setKeywordDetected(true);
             setStatus('Keyword detected!');
-
-            // Stop listening when keyword is detected
+            // Stop listening after keyword detection
             if (keywordDetectorRef.current) {
               keywordDetectorRef.current.stopListening();
               setIsListening(false);
-              setStatus('Listening paused');
-            }
-
-            // Show alert
-            alert('Keyword detected!');
-
-            // Optionally, restart listening after alert
-            if (keywordDetectorRef.current) {
-              keywordDetectorRef.current.startListening();
-              setIsListening(true);
-              setStatus('Listening...');
+              setStatus('Listening stopped');
             }
           }
         };
 
         const keywordDetector = new KeywordDetector(
           modelsFolderPath,
-          modelToUse,
+          selectedModel,
           threshold,
           bufferCount,
           onKeywordDetected
         );
 
         await keywordDetector.init();
-        setStatus(
-          `Models loaded. Ready to start listening for keyword: ${modelToUse
-            .replace(/\.onnx$/, '')
-            .replace(/_/g, ' ')}`
-        );
+        setStatus(`Models loaded.
+          Ready to start listening for keyword: ${formatModelName(selectedModel)}`);
         keywordDetectorRef.current = keywordDetector;
         setIsReady(true);
       } catch (error) {
@@ -81,16 +70,14 @@ function LanguageSelector() {
       }
     };
 
-    // Initialize the keyword detection
     initKeywordDetection();
 
-    // Cleanup: stop the keyword detector when the component unmounts
     return () => {
       if (keywordDetectorRef.current) {
         keywordDetectorRef.current.stopListening();
       }
     };
-  }, []);
+  }, [selectedModel]);
 
   const handleStartListening = () => {
     if (keywordDetectorRef.current) {
@@ -108,10 +95,18 @@ function LanguageSelector() {
     }
   };
 
-  const languages = [
-    { code: 'Need help now', active: true },
-    { code: 'Hello', active: false },
-    { code: 'Who are you', active: false },
+  const handleModelChange = (model) => {
+    if (model !== selectedModel) {
+      if (isListening) handleStopListening();
+      setSelectedModel(model);
+      setStatus(`Switching to model: ${formatModelName(model)}`);
+    }
+  };
+
+  const modelSelector = [
+    { code: 'Need help now', fileName: 'need_help_now.onnx' },
+    { code: 'Hello', fileName: 'hello.onnx' },
+    { code: 'Who are you', fileName: 'who_are_you.onnx' },
   ];
 
   return (
@@ -136,20 +131,21 @@ function LanguageSelector() {
           )}
         </div>
         <div className="space-y-2">
-          {languages.map((lang, index) => (
+          {modelSelector.map((model, index) => (
             <div key={index} className="flex justify-between items-center">
-              <span className="text-white/70">{lang.code}</span>
-              {index === 0 ? (
-                <div className="flex gap-1">
-                  {lang.themes?.map((theme, i) => (
-                    <div key={i} className="w-3 h-3 rounded-sm bg-white/20"></div>
-                  ))}
-                </div>
-              ) : (
-                <div className="w-10 h-6 bg-white/10 rounded-full flex items-center p-1">
-                  <div className="w-4 h-4 bg-white/30 rounded-full"></div>
-                </div>
-              )}
+              <span className="text-white/70">{model.code}</span>
+              <button
+                onClick={() => handleModelChange(model.fileName)}
+                className={`w-10 h-6 rounded-full flex items-center p-1 ${
+                  selectedModel === model.fileName ? 'bg-blue-500' : 'bg-white/10'
+                }`}
+              >
+                <div
+                  className={`w-4 h-4 rounded-full ${
+                    selectedModel === model.fileName ? 'bg-white' : 'bg-white/30'
+                  }`}
+                />
+              </button>
             </div>
           ))}
         </div>
@@ -158,4 +154,4 @@ function LanguageSelector() {
   );
 }
 
-export default LanguageSelector;
+export default Demo;

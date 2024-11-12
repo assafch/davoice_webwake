@@ -31,13 +31,22 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader', // Injects styles into the DOM
-          'css-loader',   // Parses CSS files
+          'style-loader',
+          'css-loader',
+          'postcss-loader', // Ensure postcss-loader is included here
         ],
       },
       {
         test: /\.wasm$/,
         type: 'webassembly/async',
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i, // Match image file extensions
+        type: 'asset/resource', // Emit separate files and export URLs
       },
     ],
   },

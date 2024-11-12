@@ -1,76 +1,17 @@
-.demo-container {
-    background-color: #32343517;
-    padding: 20px;
-    border-radius: 10px;
-    border: #000 1px solid;
-    font-family: Arial, sans-serif;
-    max-width: 300px;
-    margin: 20px auto;
-  }
-  
-  .controls-container {
-    margin-bottom: 20px;
-  }
-  
-  .lottie-box {
-    text-align: center;
-    opacity: 0.5;
-  }
-  
-  .lottie-box svg * {
-    stroke: #ffffff;
-  }
-  
-  .demos-platform-mic-button-container {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .mic-button .btn {
-    background-color: #fff;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-  }
-  
-  .mic-button svg {
-    fill: #000;
-  }
-  
-  .helper-text {
-    margin-top: 10px;
-  }
-  
-  .accordion-button {
-    background-color: #f0f0f0;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-  }
-  
-  .accordion-body {
-    padding-left: 0;
-  }
-  
-  .lightbulb-color-list {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  .palette-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .color-dot-bg {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
