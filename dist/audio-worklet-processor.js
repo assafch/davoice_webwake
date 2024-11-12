@@ -1,0 +1,1 @@
+class AudioProcessorWorklet extends AudioWorkletProcessor{constructor(){super()}process(o,s,r){const e=o[0];if(e.length>0){const o=e[0];this.port.postMessage(o)}return!0}}registerProcessor("audio-processor",AudioProcessorWorklet);

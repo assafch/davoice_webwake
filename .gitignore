@@ -1,9 +1,10 @@
-node_modules
-/dist
-bundle.js
-.DS_Storenode_modules
-dist/bundle.js
-dist/bundle.js.LICENSE.txt
-dist/bundle.js
-.gitignore
-package-lock.json
+# Dependencies
+node_modules/
+
+# OS-specific files
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
