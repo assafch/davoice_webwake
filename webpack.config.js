@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js', // Output bundle
-    publicPath: '/davoice_webwake/', // Important for GitHub Pages
+    publicPath: './', // Important for GitHub Pages
   },
   performance: {
     hints: false,
@@ -55,7 +55,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html', // Source HTML file
       filename: 'index.html', // Output file in 'dist' directory
-      publicPath: '/davoice_webwake/', // Ensure correct asset paths
     }),
     new CopyWebpackPlugin({
       patterns: [
