@@ -9,6 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js', // Output bundle
+    publicPath: '/davoice_webwake/', // Important for GitHub Pages
   },
   performance: {
     hints: false,
@@ -45,7 +46,7 @@ module.exports = {
         use: ['@svgr/webpack'],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i, // Match image file extensions
+        test: /\.(png|jpe?g|gif)$/i, // Match image file extensions
         type: 'asset/resource', // Emit separate files and export URLs
       },
     ],
@@ -54,17 +55,24 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html', // Source HTML file
       filename: 'index.html', // Output file in 'dist' directory
+      publicPath: '/davoice_webwake/', // Ensure correct asset paths
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'src/audio-worklet-processor.js', to: '[name][ext]' }, // Copy models to 'dist/models'
-        { from: 'models', to: 'models' }, // Copy models to 'dist/models'
+        {
+          from: 'src/audio-worklet-processor.js',
+          to: '[name][ext]',
+        },
+        {
+          from: 'models',
+          to: 'models', // Copy models to 'dist/models'
+        },
         {
           from: path.resolve(
             __dirname,
             'node_modules/keyword-detection-web/dist/*.wasm'
           ),
-          to: '[name][ext]', // Copy WASM files to dist
+          to: '[name][ext]', // Copy WASM files to 'dist'
         },
       ],
     }),
