@@ -97,26 +97,18 @@ function Navbar() {
                   <path d="M17.293 13.293A8 8 0 016.707 2.707a8.003 8.003 0 1010.586 10.586z" />
                 </svg>
               ) : (
-                // New light mode icon provided
-                <span className="dark:hidden">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                      className="fill-sky-400/20 stroke-sky-500"
-                    ></path>
-                    <path
-                      d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836"
-                      className="stroke-sky-500"
-                    ></path>
-                  </svg>
-                </span>
+                // Sun icon for light mode
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1zm5.657 3.343a1 1 0 011.414 0l1.414 1.414a1 1 0 11-1.414 1.414L17.657 6.757a1 1 0 010-1.414zM21 11h-2a1 1 0 110-2h2a1 1 0 110 2zm-9 9a1 1 0 011 1v2a1 1 0 11-2 0v-2a1 1 0 011-1zm-5.657-3.343a1 1 0 010 1.414L4.93 19.485a1 1 0 11-1.414-1.414l1.414-1.414a1 1 0 011.414 0zM3 11H1a1 1 0 110-2h2a1 1 0 110 2zm5.657-6.657a1 1 0 010 1.414L7.343 6.757a1 1 0 11-1.414-1.414L6.93 4.93a1 1 0 011.414 0z"
+                  />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
               )}
             </button>
 

@@ -1,5 +1,4 @@
 const path = require('path');
-const fs = require('fs');
 const webpack = require('webpack'); // Import the webpack module
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -9,10 +8,13 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js', // Output bundle
-    publicPath: './', // Important for GitHub Pages
+    publicPath: '/davoice_webwake/', // Important for GitHub Pages
   },
   performance: {
     hints: false,
+  },
+  optimization: {
+    splitChunks: false, // Disable code splitting
   },
   module: {
     rules: [
@@ -55,6 +57,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html', // Source HTML file
       filename: 'index.html', // Output file in 'dist' directory
+      inject: true, // Ensure scripts are injected
     }),
     new CopyWebpackPlugin({
       patterns: [
