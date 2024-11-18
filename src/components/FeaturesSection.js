@@ -2,7 +2,7 @@ import React from 'react';
 
 const FeaturesSection = () => {
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 flex items-center justify-center p-4 skew-y-1">
+    <div className="bg-gray-100 dark:bg-gray-900 flex items-center justify-center p-4">
       <div className="rounded-lg shadow-lg p-10 max-w-4xl mx-auto transform">
         <div className="border-l-8 border-blue-500 dark:border-blue-400 pl-8">
           <h2 className="text-3xl font-semibold text-gray-900 dark:text-gray-400 mb-4">Why DaVoice?</h2>

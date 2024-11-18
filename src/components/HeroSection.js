@@ -43,7 +43,7 @@ function HeroSection() {
             </a>
           </div>
         </div>
-        <div className="lg:col-span-5 lg:flex justify-center">
+        <div className="lg:col-span-5 lg:flex justify-center invisible">
           <LanguageSelector />
         </div>
       </div>

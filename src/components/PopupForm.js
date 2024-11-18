@@ -1,22 +1,40 @@
 // components/PopupForm.js
-import React, { useState, useEffect, useRef } from 'react';
-import ContactForm from './ContacForm';
+import React, { useState, useEffect } from 'react';
+import ContactForm from './ContactForm';
 
 const PopupForm = () => {
   const [showPopup, setShowPopup] = useState(false);
-  const popupRef = useRef(null);
+  const [hasShownPopup, setHasShownPopup] = useState(false); // Ensure popup shows only once
 
   useEffect(() => {
-    // Show popup on first load
-    setShowPopup(true);
-  }, []);
+    const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent);
 
-  useEffect(() => {
-    if (showPopup) {
-      // Trap focus within the popup
-      popupRef.current?.focus();
+    if (isMobileDevice) {
+      // For mobile devices, show popup after 10 seconds
+      const timer = setTimeout(() => {
+        if (!hasShownPopup) {
+          setShowPopup(true);
+          setHasShownPopup(true);
+        }
+      }, 10000); // 10000 milliseconds = 10 seconds
+
+      return () => clearTimeout(timer);
+    } else {
+      // For desktop devices, detect exit intent
+      const handleMouseLeave = (e) => {
+        if (e.clientY <= 0 && !hasShownPopup) {
+          setShowPopup(true);
+          setHasShownPopup(true);
+        }
+      };
+
+      document.addEventListener('mouseout', handleMouseLeave);
+
+      return () => {
+        document.removeEventListener('mouseout', handleMouseLeave);
+      };
     }
-  }, [showPopup]);
+  }, [hasShownPopup]);
 
   const handleClose = () => {
     setShowPopup(false);
@@ -33,8 +51,6 @@ const PopupForm = () => {
         >
           <div
             className="relative bg-gray-100 dark:bg-gray-900 rounded-lg overflow-y-auto max-w-3xl w-full mx-4 my-8 p-6 max-h-screen"
-            ref={popupRef}
-            tabIndex="-1"
           >
             {/* Close Button */}
             <button
