@@ -110,39 +110,43 @@ function Demo() {
   ];
 
   return (
-    <div className="top-4 right-4 bg-blue-600/10 backdrop-blur-sm border border-white/10 rounded-lg p-4 w-72">
+    <div className="top-4 right-4 bg-white dark:bg-gray-800 backdrop-blur-sm border border-gray-300 dark:border-gray-700 rounded-lg p-4 w-72">
       <div className="flex flex-col gap-4">
         <div className="flex items-center justify-center flex-col gap-2">
           <button
             onClick={isListening ? handleStopListening : handleStartListening}
             disabled={!isReady}
-            className={`w-16 h-16 bg-white/10 rounded-full flex items-center justify-center focus:outline-none ${
+            className={`w-16 h-16 bg-blue-500 dark:bg-blue-600 rounded-full flex items-center justify-center focus:outline-none ${
               !isReady ? 'opacity-50 cursor-not-allowed' : ''
             }`}
           >
             <Mic className={`w-8 h-8 ${isListening ? 'text-yellow-500' : 'text-white'}`} />
           </button>
-          <span className="text-white/70 text-sm">
+          <span className="text-gray-700 dark:text-gray-300 text-sm">
             {isListening ? 'Listening...' : 'Click to activate'}
           </span>
-          {status && <div className="text-white/70 text-xs">{status}</div>}
+          {status && <div className="text-gray-700 dark:text-gray-300 text-xs">{status}</div>}
           {keywordDetected && (
-            <div className="text-white/70 text-xs mt-2">Keyword detected!</div>
+            <div className="text-gray-700 dark:text-gray-300 text-xs mt-2">Keyword detected!</div>
           )}
         </div>
         <div className="space-y-2">
           {modelSelector.map((model, index) => (
             <div key={index} className="flex justify-between items-center">
-              <span className="text-white/70">{model.code}</span>
+              <span className="text-gray-700 dark:text-gray-300">{model.code}</span>
               <button
                 onClick={() => handleModelChange(model.fileName)}
                 className={`w-10 h-6 rounded-full flex items-center p-1 ${
-                  selectedModel === model.fileName ? 'bg-blue-500' : 'bg-white/10'
+                  selectedModel === model.fileName
+                    ? 'bg-blue-500 dark:bg-blue-600'
+                    : 'bg-gray-300 dark:bg-gray-700'
                 }`}
               >
                 <div
-                  className={`w-4 h-4 rounded-full ${
-                    selectedModel === model.fileName ? 'bg-white' : 'bg-white/30'
+                  className={`w-4 h-4 rounded-full transform transition-transform ${
+                    selectedModel === model.fileName
+                      ? 'translate-x-4 bg-white'
+                      : 'bg-gray-500 dark:bg-gray-400'
                   }`}
                 />
               </button>
