@@ -7,11 +7,6 @@ const Footer = () => {
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="#" className="flex items-center">
-              <img
-                src="https://flowbite.com/docs/images/logo.svg"
-                className="mr-3 h-8"
-                alt="DaVoice Logo"
-              />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 DaVoice
               </span>
@@ -28,11 +23,6 @@ const Footer = () => {
                     DaVoice
                   </a>
                 </li>
-                <li>
-                  <a href="https://tailwindcss.com/" className="hover:underline">
-                    Tailwind CSS
-                  </a>
-                </li>
               </ul>
             </div>
             <div>
@@ -47,7 +37,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a href="#" className="hover:underline">
-                    Discord
+                    LinkedIn
                   </a>
                 </li>
               </ul>

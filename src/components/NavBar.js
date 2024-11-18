@@ -1,198 +1,146 @@
 // components/Navbar.js
 import React, { useState, useEffect } from 'react';
+import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
 
 function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // On component mount, set initial dark mode state
-  useEffect(() => {
-    const theme = localStorage.getItem('theme');
-    if (theme === 'dark') {
-      setIsDarkMode(true);
-      document.documentElement.classList.add('dark');
-    } else if (theme === 'light') {
-      setIsDarkMode(false);
-      document.documentElement.classList.remove('dark');
-    } else {
-      // No preference stored, check prefers-color-scheme
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        setIsDarkMode(true);
-        document.documentElement.classList.add('dark');
-      } else {
-        setIsDarkMode(false);
-        document.documentElement.classList.remove('dark');
-      }
-    }
-  }, []);
+    // On component mount, set initial dark mode state
+    useEffect(() => {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+            setIsDarkMode(true);
+            document.documentElement.classList.add('dark');
+        } else if (theme === 'light') {
+            setIsDarkMode(false);
+            document.documentElement.classList.remove('dark');
+        } else {
+            // No preference stored, check prefers-color-scheme
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                setIsDarkMode(true);
+                document.documentElement.classList.add('dark');
+            } else {
+                setIsDarkMode(false);
+                document.documentElement.classList.remove('dark');
+            }
+        }
+    }, []);
 
-  const toggleDarkMode = () => {
-    if (!isDarkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-    setIsDarkMode(!isDarkMode);
-  };
+    const toggleDarkMode = () => {
+        if (!isDarkMode) {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        }
+        setIsDarkMode(!isDarkMode);
+    };
 
-  return (
-    <nav className="bg-gray-900 dark:bg-gray-800 border-b border-gray-800">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo and main nav */}
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <span className="text-white dark:text-gray-200 text-xl font-bold">DaVoice</span>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <a
-                  href="/home"
-                  className="text-white dark:text-gray-200 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-700"
-                >
-                  Home
-                </a>
-                <a
-                  href="/contact"
-                  className="text-gray-300 dark:text-gray-400 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white dark:hover:text-gray-200"
-                >
-                  Contact
-                </a>
-              </div>
-            </div>
-          </div>
+    return (
+        <nav className="bg-gray-900 dark:bg-gray-800 border-b border-gray-800">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center justify-between h-16">
+                    {/* Logo and main nav */}
+                    <div className="flex items-center">
+                        <div className="flex-shrink-0">
+                            <span className="text-white dark:text-gray-200 text-xl font-bold">
+                                DaVoice
+                            </span>
+                        </div>
+                        <div className="hidden md:block">
+                            <div className="ml-10 flex items-baseline space-x-4">
+                                <a
+                                    href="/home"
+                                    className="text-white dark:text-gray-200 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-700">
+                                    Home
+                                </a>
+                                <a
+                                    href="/contact"
+                                    className="text-gray-300 dark:text-gray-400 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white dark:hover:text-gray-200">
+                                    Contact
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-          {/* CTA, Dark Mode Toggle, and Mobile menu button */}
-          <div className="flex items-center">
-            <div className="hidden md:flex items-center space-x-4">
-              <a
-                href="/signin"
-                className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 text-sm font-medium"
-              >
-                Sign in
-              </a>
-              <a
-                href="/get-started"
-                className="bg-blue-600 dark:bg-blue-500 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-500 dark:hover:bg-blue-400 transition"
-              >
-                Get Started
-              </a>
-            </div>
+                    {/* CTA, Dark Mode Toggle, and Mobile menu button */}
+                    <div className="flex items-center">
+                        <div className="hidden md:flex items-center space-x-4">
+                            <a
+                                href="/signin"
+                                className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 text-sm font-medium">
+                                Sign in
+                            </a>
+                            <a
+                                href="/get-started"
+                                className="bg-blue-600 dark:bg-blue-500 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-500 dark:hover:bg-blue-400 transition">
+                                Get Started
+                            </a>
+                        </div>
 
-            {/* Dark mode toggle button */}
-            <button
-              onClick={toggleDarkMode}
-              className="ml-4 text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 focus:outline-none"
-            >
-              {isDarkMode ? (
-                // Moon icon for dark mode
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.003 8.003 0 1010.586 10.586z" />
-                </svg>
-              ) : (
-                // Sun icon for light mode
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M12 2a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1zm5.657 3.343a1 1 0 011.414 0l1.414 1.414a1 1 0 11-1.414 1.414L17.657 6.757a1 1 0 010-1.414zM21 11h-2a1 1 0 110-2h2a1 1 0 110 2zm-9 9a1 1 0 011 1v2a1 1 0 11-2 0v-2a1 1 0 011-1zm-5.657-3.343a1 1 0 010 1.414L4.93 19.485a1 1 0 11-1.414-1.414l1.414-1.414a1 1 0 011.414 0zM3 11H1a1 1 0 110-2h2a1 1 0 110 2zm5.657-6.657a1 1 0 010 1.414L7.343 6.757a1 1 0 11-1.414-1.414L6.93 4.93a1 1 0 011.414 0z"
-                  />
-                  <circle cx="12" cy="12" r="3" />
-                </svg>
-              )}
-            </button>
+                        {/* Dark mode toggle button */}
+                        <button
+                            onClick={toggleDarkMode}
+                            className="ml-4 text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 focus:outline-none">
+                            {isDarkMode ? (
+                                <FiMoon className="w-6 h-6" />
+                            ) : (
+                                <FiSun className="w-6 h-6" />
+                            )}
+                        </button>
 
-            {/* Mobile menu button */}
-            <div className="md:hidden flex items-center">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white dark:hover:text-gray-200 hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none"
-              >
-                <span className="sr-only">Open main menu</span>
-                {!isMenuOpen ? (
-                  <svg
-                    className="block h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    className="block h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
+                        {/* Mobile menu button */}
+                        <div className="md:hidden flex items-center">
+                            <button
+                                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white dark:hover:text-gray-200 hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none">
+                                <span className="sr-only">Open main menu</span>
+                                {!isMenuOpen ? (
+                                    <FiMenu className="w-6 h-6" />
+                                ) : (
+                                    <FiX className="w-6 h-6" />
+                                )}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Mobile menu */}
+                {isMenuOpen && (
+                    <div className="md:hidden">
+                        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                            <a
+                                href="/home"
+                                className="text-white dark:text-gray-200 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 dark:hover:bg-gray-700">
+                                Home
+                            </a>
+                            <a
+                                href="/contact"
+                                className="text-gray-300 dark:text-gray-400 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white dark:hover:text-gray-200">
+                                Contact
+                            </a>
+                        </div>
+                        <div className="pt-4 pb-3 border-t border-gray-800 dark:border-gray-700">
+                            <div className="flex items-center px-5">
+                                <a
+                                    href="/signin"
+                                    className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 text-base font-medium block">
+                                    Sign in
+                                </a>
+                                <a
+                                    href="/get-started"
+                                    className="ml-auto bg-blue-600 dark:bg-blue-500 px-4 py-2 rounded-md text-base font-medium hover:bg-blue-500 dark:hover:bg-blue-400 transition">
+                                    Get Started
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 )}
-              </button>
             </div>
-          </div>
-        </div>
-
-        {/* Mobile menu */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a
-                href="/home"
-                className="text-white dark:text-gray-200 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 dark:hover:bg-gray-700"
-              >
-                Home
-              </a>
-              <a
-                href="/contact"
-                className="text-gray-300 dark:text-gray-400 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white dark:hover:text-gray-200"
-              >
-                Contact
-              </a>
-            </div>
-            <div className="pt-4 pb-3 border-t border-gray-800 dark:border-gray-700">
-              <div className="flex items-center px-5">
-                <a
-                  href="/signin"
-                  className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 text-base font-medium block"
-                >
-                  Sign in
-                </a>
-                <a
-                  href="/get-started"
-                  className="ml-auto bg-blue-600 dark:bg-blue-500 px-4 py-2 rounded-md text-base font-medium hover:bg-blue-500 dark:hover:bg-blue-400 transition"
-                >
-                  Get Started
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
-  );
+        </nav>
+    );
 }
 
 export default Navbar;

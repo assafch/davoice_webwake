@@ -6,7 +6,7 @@ function HeroSection() {
   return (
     <section className="bg-gray-100 dark:bg-gray-900">
       <div className="container mx-auto px-9 py-16 grid lg:grid-cols-12 gap-8 items-center">
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-6 lg:col-start-2">
           <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
             DaVoice Wake Word
           </h2>

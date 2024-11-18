@@ -1,5 +1,10 @@
+// tailwind.config.js
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx,html}'], // Adjust the paths based on your project structure
+  darkMode: 'class', // Enable 'class' strategy for dark mode
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}', // Adjust paths to your project structure
+    './public/index.html',
+  ],
   theme: {
     extend: {},
   },
