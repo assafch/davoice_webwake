@@ -27,7 +27,7 @@ function TestimonialsSection() {
                         <figcaption className="flex items-center justify-center mt-6 space-x-3">
                             <img
                                 className="w-6 h-6 rounded-full"
-                                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                                src="https://github.com/assafch/davoice_webwake/blob/main/logos/Lee.jpeg?raw=true"
                                 alt="Profile picture of Lee Sharir-Dolev"
                             />
                             <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
@@ -62,7 +62,7 @@ function TestimonialsSection() {
                         <figcaption className="flex items-center justify-center mt-6 space-x-3">
                             <img
                                 className="w-6 h-6 rounded-full"
-                                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+                                src="https://github.com/assafch/davoice_webwake/blob/main/logos/Lottan.jpeg?raw=true"
                                 alt="Profile picture of Lottan Horev"
                             />
                             <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
@@ -95,8 +95,8 @@ function TestimonialsSection() {
                         <figcaption className="flex items-center justify-center mt-6 space-x-3">
                             <img
                                 className="w-6 h-6 rounded-full"
-                                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-                                alt="Profile picture of Lottan Horev"
+                                src="https://github.com/assafch/davoice_webwake/blob/main/logos/HentyFox.jpeg?raw=true"
+                                alt="Profile picture of Henry Fox"
                             />
                             <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
                                 <cite className="pr-3 font-medium text-gray-900 dark:text-white">
@@ -128,8 +128,8 @@ function TestimonialsSection() {
                         <figcaption className="flex items-center justify-center mt-6 space-x-3">
                             <img
                                 className="w-6 h-6 rounded-full"
-                                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-                                alt="Profile picture of Lottan Horev"
+                                src="https://github.com/assafch/davoice_webwake/blob/main/logos/henry_warren%20(1).jpeg?raw=true"
+                                alt="Profile picture of Henry Warren"
                             />
                             <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
                                 <cite className="pr-3 font-medium text-gray-900 dark:text-white">

@@ -38,7 +38,7 @@ function FAQSection() {
               How accurate is the platform?
             </summary>
             <p className="mt-2 text-gray-700 dark:text-gray-300">
-              Our platform ensures 95%+ accuracy in various environments.
+              Our platform ensures 99.99%+ accuracy in various environments.
             </p>
           </details>
           {/* Add more FAQs as needed, applying the same styles */}
