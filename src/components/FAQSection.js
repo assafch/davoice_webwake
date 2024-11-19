@@ -13,6 +13,26 @@ function FAQSection() {
               A wake word is a keyword that activates your device, like "Hey Siri" or "OK Google".
             </p>
           </details>
+          <details className="bg-gray-700 p-4 rounded-lg shadow">
+            <summary className="cursor-pointer font-bold">What is a Speech to Intent?</summary>
+            <p className="mt-2 text-gray-300">
+                Speech to Intent refers to the ability to recognize a spoken word or phrase <br/>
+                and directly associate it with a specific action or operation within an application.<br/>
+                <br/>
+                Unlike a "wake word," which typically serves to activate or wake up the application,<br/> 
+                Speech to Intent goes further by enabling complex interactions and functionalities <br/>
+                based on the recognized intent behind the speech.<br/>
+                <br/>
+                For example, a wake word like "Hey App" might activate the application, while Speech<br/>
+                to Intent could process a phrase like "Play my favorite song" or "Order a coffee" to <br/>
+                execute corresponding tasks within the app.<br/>
+                
+                Speech to Intent is often triggered after a wake word activates the app, making it a key <br/>
+                component of more advanced voice-controlled applications. This layered approach allows for <br/>
+                seamless and intuitive voice-driven user experiences.
+            </p>
+        </details>
+
           <details className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow">
             <summary className="cursor-pointer font-bold text-gray-900 dark:text-white">
               How accurate is the platform?

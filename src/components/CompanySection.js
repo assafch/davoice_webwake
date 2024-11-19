@@ -14,19 +14,19 @@ function CompanySection() {
               href="#"
               className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
             >
-              <img src="https://raw.githubusercontent.com/assafch/davoice_webwake/81fdea418bea0d551cdc637e195781f748900eef/src/images/hotel_genie_logo.svg" alt="Logo 1" className="h-20" />
+              <img src="https://github.com/assafch/davoice_webwake/blob/main/logos/hotel_ginie_logo.png?raw=true" alt="Logo 1" className="h-20" />
             </a>
             <a
               href="#"
               className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
             >
-              <img src="https://raw.githubusercontent.com/assafch/davoice_webwake/81fdea418bea0d551cdc637e195781f748900eef/src/images/Relyon_logo.svg" alt="Logo 2" className="h-32" />
+              <img src="https://github.com/assafch/davoice_webwake/blob/main/logos/Screenshot-2024-10-09-at-17.58.48.png?raw=true" alt="Logo 2" className="h-32" />
             </a>
             <a
               href="#"
               className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
             >
-              <img src="https://raw.githubusercontent.com/assafch/davoice_webwake/81fdea418bea0d551cdc637e195781f748900eef/src/images/Seirtech_logo.svg" alt="Logo 3" className="h-36" />
+              <img src="https://github.com/assafch/davoice_webwake/blob/main/logos/SierLogo.jpg?raw=true" alt="Logo 1" className="h-20" />
             </a>
           </div>
         </div>
