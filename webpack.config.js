@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js', // Output bundle
-    publicPath: '/davoice_webwake/', // Important for GitHub Pages
+    publicPath: '/', // Adjust this to match your deployed subdirectory
   },
   performance: {
     hints: false,

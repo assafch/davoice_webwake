@@ -9,8 +9,9 @@ function App() {
       <Routes>
         {/* All navigation buttons redirect here */}
         <Route path="/" element={<AppHome />} />
-        <Route path="/Home" element={<AppHome />} />
+        <Route path="/home" element={<AppHome />} case-sensitive={false} />
         <Route path="Home" element={<AppHome />} />
+        <Route path="/contact-us" element={<ContactUsPage />} case-sensitive={false}/>
         <Route path="*" element={<ContactUsPage />} />
       </Routes>
     </Router>

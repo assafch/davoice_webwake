@@ -4,7 +4,9 @@ import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(true);
+
+    document.documentElement.classList.add('dark');
 
     // On component mount, set initial dark mode state
     useEffect(() => {
@@ -13,17 +15,21 @@ function Navbar() {
             setIsDarkMode(true);
             document.documentElement.classList.add('dark');
         } else if (theme === 'light') {
-            setIsDarkMode(false);
-            document.documentElement.classList.remove('dark');
+            setIsDarkMode(true);
+            document.documentElement.classList.add('dark');
+//            setIsDarkMode(false);
+//            document.documentElement.classList.remove('dark');
         } else {
+            setIsDarkMode(true);
+            document.documentElement.classList.add('dark');
             // No preference stored, check prefers-color-scheme
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                setIsDarkMode(true);
-                document.documentElement.classList.add('dark');
-            } else {
-                setIsDarkMode(false);
-                document.documentElement.classList.remove('dark');
-            }
+//            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  //              setIsDarkMode(true);
+            //    document.documentElement.classList.add('dark');
+    //        } else {
+      //          setIsDarkMode(false);
+        //        document.documentElement.classList.remove('dark');
+          //  }
         }
     }, []);
 
@@ -57,7 +63,7 @@ function Navbar() {
                                     Home
                                 </a>
                                 <a
-                                    href="/contact-us"
+                                    href="/aaa"
                                     className="text-gray-300 dark:text-gray-400 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white dark:hover:text-gray-200">
                                     Contact
                                 </a>
@@ -69,12 +75,12 @@ function Navbar() {
                     <div className="flex items-center">
                         <div className="hidden md:flex items-center space-x-4">
                             <a
-                                href="/contact-us"
+                                href="/aaa"
                                 className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 text-sm font-medium">
                                 Sign in
                             </a>
                             <a
-                                href="/contact-us"
+                                href="/aaa"
                                 className="bg-blue-600 dark:bg-blue-500 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-500 dark:hover:bg-blue-400 transition">
                                 Get Started
                             </a>
@@ -112,12 +118,12 @@ function Navbar() {
                     <div className="md:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             <a
-                                href="/contact-us"
+                                href="/"
                                 className="text-white dark:text-gray-200 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 dark:hover:bg-gray-700">
                                 Home
                             </a>
                             <a
-                                href="/contact-us"
+                                href="/aaa"
                                 className="text-gray-300 dark:text-gray-400 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white dark:hover:text-gray-200">
                                 Contact
                             </a>
@@ -125,12 +131,12 @@ function Navbar() {
                         <div className="pt-4 pb-3 border-t border-gray-800 dark:border-gray-700">
                             <div className="flex items-center px-5">
                                 <a
-                                    href="/contact-us"
+                                    href="/aaa"
                                     className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 text-base font-medium block">
                                     Sign in
                                 </a>
                                 <a
-                                    href="/contact-us"
+                                    href="/aaa"
                                     className="ml-auto bg-blue-600 dark:bg-blue-500 px-4 py-2 rounded-md text-base font-medium hover:bg-blue-500 dark:hover:bg-blue-400 transition">
                                     Get Started
                                 </a>
