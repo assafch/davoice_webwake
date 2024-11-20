@@ -28,6 +28,12 @@ function CompanySection() {
             >
               <img src="https://github.com/assafch/davoice_webwake/blob/main/logos/SierLogo.jpg?raw=true" alt="Logo 1" className="h-20" />
             </a>
+            <a
+              href="#"
+              className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
+            >
+              <img src="https://github.com/assafch/davoice_webwake/blob/main/logos/lunafit.jpeg?raw=true" alt="Logo 1" className="h-20" />
+            </a>
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ import CompanySection from './components/CompanySection';
 import TestimonialsSection from './components/TestimonialsSection';
 import WakeWordSection from './components/WakeWordSection';
 import PopupForm from './components/PopupForm';
+import ContactForm from './components/ContacForm';
 import Footer from './components/Footer';
 
 function App() {
@@ -21,7 +22,6 @@ function App() {
       <WakeWordSection />
       <FAQSection />
       <Footer />
-      <PopupForm />
     </div>
   );
 }
