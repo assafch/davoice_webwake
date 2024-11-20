@@ -64,6 +64,7 @@ const ContactForm = () => {
                     <input
                       type="text"
                       id="firstName"
+                      name="firstName"
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                       placeholder="First Name"
                       required
@@ -77,6 +78,7 @@ const ContactForm = () => {
                     <input
                       type="text"
                       id="lastName"
+                      name="lastName"
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                       placeholder="Last Name"
                       required
@@ -92,6 +94,7 @@ const ContactForm = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                     placeholder="name@example.com"
                     required
@@ -105,6 +108,7 @@ const ContactForm = () => {
                   </label>
                   <select
                     id="platform"
+                    name="platform"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                   >
                     <option value="Python">Python</option>
@@ -130,6 +134,7 @@ const ContactForm = () => {
                   </label>
                   <textarea
                     id="wakeWords"
+                    name="wakeWords"
                     rows="4"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                     placeholder="Enter your desired wake words..."
@@ -143,6 +148,7 @@ const ContactForm = () => {
                   </label>
                   <textarea
                     id="additionalInfo"
+                    name="additionalInfo"
                     rows="4"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                     placeholder="Any additional information..."

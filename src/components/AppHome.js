@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from './Navbar';
 import ContactSection from './ContactSection'
+import ContactForm from './ContactForm'
+import PopupForm from './PopupForm'
 import HeroSection from './HeroSection';
 import CompanySection from './CompanySection';
 import TestimonialsSection from './TestimonialsSection';
@@ -19,7 +21,8 @@ function AppHome() {
       <FeaturesSection />
       <WakeWordSection />
       <FAQSection />
-      <ContactSection />
+      <ContactSection />  
+      <ContactForm />
       <Footer />
     </div>
   );

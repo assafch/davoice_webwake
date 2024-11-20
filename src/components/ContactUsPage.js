@@ -9,12 +9,15 @@ import FeaturesSection from './FeaturesSection';
 import WakeWordSection from './WakeWordSection';
 import FAQSection from './FAQSection';
 import Footer from './Footer';
+import PopupForm from './PopupForm'
+
 
 function ContactUsPage() {
   return (
     <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen">
       <Navbar />
       <ContactSection />
+      <ContactForm />
       <HeroSection />
       <CompanySection />
       <TestimonialsSection />
