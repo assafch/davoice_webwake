@@ -3,7 +3,7 @@ import React from 'react';
 
 function ContactSection() {
     return (
-        <section className="bg-white dark:bg-gray-800 py-4">
+        <section className="bg-white dark:bg-gray-800 py-4 mt-4">
             <div className="text-center">
                 <p className="font-semibold text-gray-500 uppercase dark:text-gray-400">
                     Some elements on this page are under construction!!!!
