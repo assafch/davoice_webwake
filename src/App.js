@@ -1,28 +1,19 @@
-// App.js - Main Application Component
 import React from 'react';
-import HeroSection from './components/HeroSection';
-import FeaturesSection from './components/FeaturesSection';
-import FAQSection from './components/FAQSection';
-import Navbar from './components/NavBar';
-import CompanySection from './components/CompanySection';
-import TestimonialsSection from './components/TestimonialsSection';
-import WakeWordSection from './components/WakeWordSection';
-import PopupForm from './components/PopupForm';
-import ContactForm from './components/ContacForm';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AppHome from './components/AppHome'; // Original home page
+import ContactUsPage from './components/ContactUsPage'; // New page with "Contact Us"
 
 function App() {
   return (
-    <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen">
-      <Navbar />
-      <HeroSection />
-      <CompanySection />
-      <TestimonialsSection />
-      <FeaturesSection />
-      <WakeWordSection />
-      <FAQSection />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        {/* All navigation buttons redirect here */}
+        <Route path="/" element={<AppHome />} />
+        <Route path="/Home" element={<AppHome />} />
+        <Route path="Home" element={<AppHome />} />
+        <Route path="*" element={<ContactUsPage />} />
+      </Routes>
+    </Router>
   );
 }
 

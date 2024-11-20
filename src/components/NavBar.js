@@ -52,12 +52,12 @@ function Navbar() {
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-4">
                                 <a
-                                    href="/home"
+                                    href="/"
                                     className="text-white dark:text-gray-200 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-700">
                                     Home
                                 </a>
                                 <a
-                                    href="/contact"
+                                    href="/contact-us"
                                     className="text-gray-300 dark:text-gray-400 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white dark:hover:text-gray-200">
                                     Contact
                                 </a>
@@ -69,12 +69,12 @@ function Navbar() {
                     <div className="flex items-center">
                         <div className="hidden md:flex items-center space-x-4">
                             <a
-                                href="/signin"
+                                href="/contact-us"
                                 className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 text-sm font-medium">
                                 Sign in
                             </a>
                             <a
-                                href="/get-started"
+                                href="/contact-us"
                                 className="bg-blue-600 dark:bg-blue-500 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-500 dark:hover:bg-blue-400 transition">
                                 Get Started
                             </a>
@@ -112,12 +112,12 @@ function Navbar() {
                     <div className="md:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             <a
-                                href="/home"
+                                href="/contact-us"
                                 className="text-white dark:text-gray-200 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 dark:hover:bg-gray-700">
                                 Home
                             </a>
                             <a
-                                href="/contact"
+                                href="/contact-us"
                                 className="text-gray-300 dark:text-gray-400 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white dark:hover:text-gray-200">
                                 Contact
                             </a>
@@ -125,12 +125,12 @@ function Navbar() {
                         <div className="pt-4 pb-3 border-t border-gray-800 dark:border-gray-700">
                             <div className="flex items-center px-5">
                                 <a
-                                    href="/signin"
+                                    href="/contact-us"
                                     className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 text-base font-medium block">
                                     Sign in
                                 </a>
                                 <a
-                                    href="/get-started"
+                                    href="/contact-us"
                                     className="ml-auto bg-blue-600 dark:bg-blue-500 px-4 py-2 rounded-md text-base font-medium hover:bg-blue-500 dark:hover:bg-blue-400 transition">
                                     Get Started
                                 </a>
