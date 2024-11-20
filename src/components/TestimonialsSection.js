@@ -4,7 +4,13 @@ import React from 'react';
 function TestimonialsSection() {
     return (
         <section className="bg-white dark:bg-gray-800 pb-6">
-  <div className="container mx-auto px-6">
+                    <div className="my-8 text-center">
+                        <span className="font-semibold text-gray-500 uppercase dark:text-gray-400">
+                            <br></br>
+                            TESTIMONIALS
+                        </span>
+                    </div>
+            <div className="container mx-auto px-6">
                 <div className="grid gap-8 md:grid-cols-2">
                     {/* First Testimonial */}
                     <figure className="max-w-md mx-auto text-center">
@@ -87,10 +93,10 @@ function TestimonialsSection() {
                         </svg>
                         <blockquote>
                             <p className="text-lg italic font-medium text-gray-900 dark:text-white">
-                            “DaVoice was incredibly easy to set up and fast to implement—a solution that
-                             just works. It saved us both time and money!”
+                                “DaVoice was incredibly easy to set up and fast to implement—a solution that
+                                just works. It saved us both time and money!”
 
-                             </p>
+                            </p>
                         </blockquote>
                         <figcaption className="flex items-center justify-center mt-6 space-x-3">
                             <img
@@ -100,7 +106,7 @@ function TestimonialsSection() {
                             />
                             <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
                                 <cite className="pr-3 font-medium text-gray-900 dark:text-white">
-                                    Henry Fox 
+                                    Henry Fox
                                 </cite>
                                 <cite className="pl-3 text-sm text-gray-500 dark:text-gray-400">
                                     Co-Founder @ SieTechnologies
@@ -120,8 +126,8 @@ function TestimonialsSection() {
                         </svg>
                         <blockquote>
                             <p className="text-lg italic font-medium text-gray-900 dark:text-white">
-                            “We had an exhausting journey in finding the right wake word detection solution.
-                                where after exhaustive deployment efforts I found most solutions inadequent 
+                                “We had an exhausting journey in finding the right wake word detection solution.
+                                where after exhaustive deployment efforts I found most solutions inadequent
                                 due to their high frequency of false positives.
                                 Davoice.io stood out with outstanding accuracy, ease of use and personal support”                            </p>
                         </blockquote>
@@ -133,7 +139,7 @@ function TestimonialsSection() {
                             />
                             <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
                                 <cite className="pr-3 font-medium text-gray-900 dark:text-white">
-                                    Henry Warren 
+                                    Henry Warren
                                 </cite>
                                 <cite className="pl-3 text-sm text-gray-500 dark:text-gray-400">
                                     Co-Founder @ Sier Technologies
