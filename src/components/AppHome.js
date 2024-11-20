@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
+import ContactSection from './ContactSection'
 import HeroSection from './HeroSection';
 import CompanySection from './CompanySection';
 import TestimonialsSection from './TestimonialsSection';
@@ -18,6 +19,7 @@ function AppHome() {
       <FeaturesSection />
       <WakeWordSection />
       <FAQSection />
+      <ContactSection />
       <Footer />
     </div>
   );
