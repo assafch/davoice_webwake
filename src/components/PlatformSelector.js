@@ -3,21 +3,21 @@ import React, { useState } from "react";
 const PlatformSelector = () => {
   const [selectedPlatform, setSelectedPlatform] = useState("");
   const [repositoryLink, setRepositoryLink] = useState("");
-
   const platforms = {
     "Python": "https://github.com/frymanofer/Python_WakeWordDetection",
-    "Native - Android and/or IOS": "https://github.com/frymanofer/Native_WakeWordDetection",
-    "Node.js": "https://github.com/frymanofer/Nodejs_WakeWordDetection",
+    "Native - Android and/or IOS": "https://github.com/frymanofer/KeywordsDetectionAndroidLibrary",
     "Java": "https://github.com/frymanofer/Java_WakeWordDetection",
     "React Native": "https://github.com/frymanofer/ReactNative_WakeWordDetection",
     "Flutter": "https://github.com/frymanofer/Flutter_WakeWordDetection",
     "Unity": "https://github.com/frymanofer/Unity_WakeWordDetection",
-    "Angular": "https://github.com/frymanofer/Angular_WakeWordDetection",
+    "React": "https://github.com/frymanofer/Web_WakeWordDetection",
+    "js": "https://github.com/frymanofer/Web_WakeWordDetection",
+    "Node.js": "https://github.com/frymanofer/Web_WakeWordDetection",
+    "Angular": "https://github.com/frymanofer/Web_WakeWordDetection",
     ".Net": "https://github.com/frymanofer/DotNet_WakeWordDetection",
     "Go": "https://github.com/frymanofer/Go_WakeWordDetection",
     "Rust": "https://github.com/frymanofer/Rust_WakeWordDetection",
     "C/C++": "https://github.com/frymanofer/Cpp_WakeWordDetection",
-    "Other": "https://github.com/frymanofer/Other_WakeWordDetection",
   };
 
   const handlePlatformChange = (e) => {
@@ -27,7 +27,7 @@ const PlatformSelector = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 px-6">
+    <div className="flex justify-center bg-gray-100 dark:bg-gray-900 px-6 py-4">
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 max-w-md w-full text-center">
         <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
           Select Your Platform

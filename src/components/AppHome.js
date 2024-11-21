@@ -10,6 +10,7 @@ import FeaturesSection from './FeaturesSection';
 import WakeWordSection from './WakeWordSection';
 import FAQSection from './FAQSection';
 import Footer from './Footer';
+import PlatformSelector from './PlatformSelector';
 
 function AppHome() {
   return (
@@ -17,9 +18,11 @@ function AppHome() {
       <Navbar />
       <HeroSection />
       <CompanySection />
+      <PopupForm />
       <TestimonialsSection />
       <FeaturesSection />
       <WakeWordSection />
+      <PlatformSelector />
       <FAQSection />
       <ContactSection />  
       <ContactForm />

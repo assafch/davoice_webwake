@@ -10,6 +10,7 @@ import WakeWordSection from './WakeWordSection';
 import FAQSection from './FAQSection';
 import Footer from './Footer';
 import PopupForm from './PopupForm'
+import PlatformSelector from './PlatformSelector';
 
 
 function ContactUsPage() {
@@ -18,6 +19,7 @@ function ContactUsPage() {
       <Navbar />
       <ContactSection />
       <ContactForm />
+      <PlatformSelector />
       <HeroSection />
       <CompanySection />
       <TestimonialsSection />
