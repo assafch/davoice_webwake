@@ -27,27 +27,27 @@ const PlatformSelector = () => {
   };
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 px-6 py-10">
-      <div className="text-center">
-        <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 px-6">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 max-w-md w-full text-center">
+        <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
           Select Your Platform
         </h2>
-        <p className="mb-6 font-light text-gray-700 dark:text-gray-300 sm:text-lg">
-          Choose your platform and access the corresponding GitHub repository.
+        <p className="mb-6 text-sm text-gray-700 dark:text-gray-300">
+          Choose your platform to access the corresponding GitHub repository.
         </p>
         <div className="mb-6">
           <label
             htmlFor="platform"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
           >
-            Main Platform
+            Platform
           </label>
           <select
             id="platform"
             name="platform"
             value={selectedPlatform}
             onChange={handlePlatformChange}
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
           >
             <option value="">-- Select a Platform --</option>
             {Object.keys(platforms).map((platform) => (
@@ -63,9 +63,9 @@ const PlatformSelector = () => {
               href={repositoryLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-600"
+              className="inline-block px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800"
             >
-              Open Repository for {selectedPlatform}
+              Open GitHub Repository
             </a>
           </div>
         )}
@@ -75,4 +75,3 @@ const PlatformSelector = () => {
 };
 
 export default PlatformSelector;
-
