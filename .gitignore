@@ -8,3 +8,8 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+dist/bundle.js
+src/components/ContacForm.js.Ofer
+src/components/ContacForm.js.org
+src/components/ContactForm.js.Ofer
