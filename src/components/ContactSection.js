@@ -5,16 +5,17 @@ function ContactSection() {
     return (
         <section className="bg-white dark:bg-gray-800 py-4 mt-4">
             <div className="text-center">
-                <p className="font-semibold text-gray-500 uppercase dark:text-gray-400">
-                    Some elements on this page are under construction!!!!
-                    <br />
-                    Please Contact Us
+                <p className="font-semibold italic text-gray-500 uppercase dark:text-blue-400">
+                    Under Construction - Some features or links may not be available yet.
                 </p>
             </div>
             <div className="container mx-auto px-6">
                 <div className="flex justify-center items-center h-16">
                     <p className="text-xl font-extrabold text-gray-900 dark:text-white">
-                        Contact us at: <span className="text-blue-600">info@davoice.io</span>
+                        Contact us at: 
+                        <span className="text-blue-400">
+                             <a href="mailto:info@davoice.io"> info@davoice.io</a>
+                        </span>
                     </p>
                 </div>
             </div>

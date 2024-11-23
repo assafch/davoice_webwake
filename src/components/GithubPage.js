@@ -13,23 +13,17 @@ import PopupForm from './PopupForm'
 import PlatformSelector from './PlatformSelector';
 import GithubHeadlines from './GithubHeadlines';
 
-function ContactUsPage() {
+function GithubPage() {
   return (
     <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen">
       <Navbar />
-      <ContactSection />
-      <ContactForm />
       <GithubHeadlines />
       <PlatformSelector />
-      <HeroSection />
-      <CompanySection />
-      <TestimonialsSection />
-      <FeaturesSection />
-      <WakeWordSection />
-      <FAQSection />
+      <ContactForm />
+      <ContactSection />
       <Footer />
     </div>
   );
 }
 
-export default ContactUsPage;
+export default GithubPage;

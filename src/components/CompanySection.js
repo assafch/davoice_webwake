@@ -17,7 +17,7 @@ function CompanySection() {
           slidesPerView={3}
           loop={true} // Enable infinite loop
           autoplay={{
-            delay: 3000, // 3 seconds between slides
+            delay: 5000, // 3 seconds between slides
             disableOnInteraction: false, // Keep autoplay running even after user interaction
           }}
           className="mt-4"

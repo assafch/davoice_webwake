@@ -11,6 +11,7 @@ import WakeWordSection from './WakeWordSection';
 import FAQSection from './FAQSection';
 import Footer from './Footer';
 import PlatformSelector from './PlatformSelector';
+import GithubHeadlines from './GithubHeadlines';
 
 function AppHome() {
   return (
@@ -22,6 +23,7 @@ function AppHome() {
       <TestimonialsSection />
       <FeaturesSection />
       <WakeWordSection />
+      <GithubHeadlines />
       <PlatformSelector />
       <FAQSection />
       <ContactSection />  

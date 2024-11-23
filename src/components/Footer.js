@@ -31,7 +31,7 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="github" className="hover:underline">
                     Github
                   </a>
                 </li>
