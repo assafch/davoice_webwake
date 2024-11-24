@@ -6,7 +6,7 @@ import { Autoplay } from 'swiper/modules';
 
 function CompanySection() {
   return (
-    <section className="bg-white dark:bg-gray-800 pt-6">
+    <section className="bg-white dark:bg-gray-800 pt-6 pb-6">
       <div className="container mx-auto px-6 text-center">
         <span className="font-semibold text-gray-500 uppercase dark:text-gray-400">
           TRUSTED GLOBALLY
