@@ -68,6 +68,11 @@ function Navbar() {
                                     Contact
                                 </a>
                                 <a
+                                    href="/github"
+                                    className="text-gray-300 dark:text-gray-400 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white dark:hover:text-gray-200">
+                                    GitHub
+                                </a>
+                                <a
                                     href="/in-the-news"
                                     className="text-gray-300 dark:text-gray-400 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white dark:hover:text-gray-200">
                                     In the News
@@ -131,6 +136,11 @@ function Navbar() {
                                 href="/aaa"
                                 className="text-gray-300 dark:text-gray-400 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white dark:hover:text-gray-200">
                                 Contact
+                            </a>
+                            <a
+                                href="/github"
+                                className="text-gray-300 dark:text-gray-400 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white dark:hover:text-gray-200">
+                                GitHub
                             </a>
                             <a
                                 href="/in-the-news"

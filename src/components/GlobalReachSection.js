@@ -5,7 +5,9 @@ function GlobalReachSection() {
   return (
     <section className="py-16 px-6 bg-gray-900">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-semibold mb-6">Trusted Globally</h2>
+        <h2 className="text-3xl font-semibold mb-6">
+          
+        </h2>
         <p className="mb-8">
           Our platform is trusted by organizations around the world.
         </p>
