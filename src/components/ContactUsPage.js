@@ -9,7 +9,6 @@ import FeaturesSection from './FeaturesSection';
 import WakeWordSection from './WakeWordSection';
 import FAQSection from './FAQSection';
 import Footer from './Footer';
-import PopupForm from './PopupForm'
 import PlatformSelector from './PlatformSelector';
 import GithubHeadlines from './GithubHeadlines';
 
