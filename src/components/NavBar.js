@@ -72,11 +72,11 @@ function Navbar() {
                                     className="text-gray-300 dark:text-gray-400 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white dark:hover:text-gray-200">
                                     GitHub
                                 </a>
-                                <a
+                                {/* <a
                                     href="/docs"
                                     className="text-gray-300 dark:text-gray-400 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white dark:hover:text-gray-200">
                                     Docs
-                                </a>
+                                </a> */}
                                 <a
                                     href="/in-the-news"
                                     className="text-gray-300 dark:text-gray-400 px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-700 hover:text-white dark:hover:text-gray-200">

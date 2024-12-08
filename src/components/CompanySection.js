@@ -29,7 +29,7 @@ function CompanySection() {
             >
               <img
                 src="https://github.com/assafch/davoice_webwake/blob/main/logos/hotel_ginie_logo.png?raw=true"
-                alt="Logo 1"
+                alt="Wake Word Detection and Speech-to-Intent AI"
                 className="h-20 mx-auto"
               />
             </a>
@@ -41,7 +41,7 @@ function CompanySection() {
             >
               <img
                 src="https://github.com/assafch/davoice_webwake/blob/main/logos/Screenshot-2024-10-09-at-17.58.48.png?raw=true"
-                alt="Logo 2"
+                alt="Wake Word Detection and Speech-to-Intent AI"
                 className="h-20 mx-auto"
               />
             </a>
@@ -53,7 +53,7 @@ function CompanySection() {
             >
               <img
                 src="https://github.com/assafch/davoice_webwake/blob/main/logos/SierLogo.jpg?raw=true"
-                alt="Logo 3"
+                alt="Wake Word Detection and Speech-to-Intent AI"
                 className="h-20 mx-auto"
               />
             </a>
@@ -65,7 +65,7 @@ function CompanySection() {
             >
               <img
                 src="https://github.com/assafch/davoice_webwake/blob/main/logos/lunafit.jpeg?raw=true"
-                alt="Logo 4"
+                alt="Wake Word Detection and Speech-to-Intent AI"
                 className="h-20 mx-auto"
               />
             </a>

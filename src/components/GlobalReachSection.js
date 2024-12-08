@@ -12,8 +12,8 @@ function GlobalReachSection() {
           Our platform is trusted by organizations around the world.
         </p>
         <div className="flex flex-wrap justify-center gap-8">
-          <img src="/icons/company1.png" alt="Company 1" className="w-20 h-20" />
-          <img src="/icons/company2.png" alt="Company 2" className="w-20 h-20" />
+          <img src="/icons/company1.png" alt="Wake Word Detection and Speech-to-Intent AI" className="w-20 h-20" />
+          <img src="/icons/company2.png" alt="Wake Word Detection and Speech-to-Intent AI" className="w-20 h-20" />
           {/* Add more logos as needed */}
         </div>
       </div>
