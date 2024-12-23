@@ -40,19 +40,7 @@ function CompanySection() {
               className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
             >
               <img
-                src="https://github.com/assafch/davoice_webwake/blob/main/logos/Screenshot-2024-10-09-at-17.58.48.png?raw=true"
-                alt="Wake Word Detection and Speech-to-Intent AI"
-                className="h-20 mx-auto"
-              />
-            </a>
-          </SwiperSlide>
-          <SwiperSlide>
-            <a
-              href="#"
-              className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
-            >
-              <img
-                src="https://github.com/assafch/davoice_webwake/blob/main/logos/SierLogo.jpg?raw=true"
+                src="https://github.com/assafch/davoice_webwake/blob/main/logos/look_deep_logo.jpg?raw=true"
                 alt="Wake Word Detection and Speech-to-Intent AI"
                 className="h-20 mx-auto"
               />
@@ -76,7 +64,19 @@ function CompanySection() {
               className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
             >
               <img
-                src="https://github.com/assafch/davoice_webwake/blob/main/logos/look_deep_logo.jpg?raw=true"
+                src="https://github.com/assafch/davoice_webwake/blob/main/logos/Screenshot-2024-10-09-at-17.58.48.png?raw=true"
+                alt="Wake Word Detection and Speech-to-Intent AI"
+                className="h-20 mx-auto"
+              />
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a
+              href="#"
+              className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
+            >
+              <img
+                src="https://github.com/assafch/davoice_webwake/blob/main/logos/SierLogo.jpg?raw=true"
                 alt="Wake Word Detection and Speech-to-Intent AI"
                 className="h-20 mx-auto"
               />
