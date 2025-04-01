@@ -6,6 +6,8 @@ import GithubPage from './components/GithubPage';
 import LearnPage from './components/LearnPage';
 import InTheNewsPage from './components/InTheNewsPage';
 import Docs from './components/Docs';
+import BenchmarkPage from './components/BenchmarkPage';
+import PricingPage from './components/PricingPage';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         {/* All navigation buttons redirect here */}
         <Route path="/" element={<AppHome />} />
         <Route path="/home" element={<AppHome />} caseSensitive={false} />
+        <Route path="/benchmark" element={<BenchmarkPage />} />
+        <Route path="/pricing" element={<PricingPage />} />
         <Route path="/in-the-news" element={<InTheNewsPage />} />
         <Route path="/contact-us" element={<ContactUsPage />} caseSensitive={false} />
         <Route path="/wake-word" element={<LearnPage />} caseSensitive={false} />

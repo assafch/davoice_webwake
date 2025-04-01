@@ -24,7 +24,9 @@ function CompanySection() {
         >
           <SwiperSlide>
             <a
-              href="#"
+              href="https://www.hotelgenie.app" // Use the real link
+              target="_blank"
+              rel="noopener noreferrer"
               className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
             >
               <img
@@ -36,7 +38,10 @@ function CompanySection() {
           </SwiperSlide>
           <SwiperSlide>
             <a
-              href="#"
+              href="https://lookdeep.health" // Use the real link
+              target="_blank"
+              rel="noopener noreferrer"
+
               className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
             >
               <img
@@ -48,7 +53,10 @@ function CompanySection() {
           </SwiperSlide>
           <SwiperSlide>
             <a
-              href="#"
+              href="https://www.lunafitapp.com" // Use the real link
+              target="_blank"
+              rel="noopener noreferrer"
+
               className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
             >
               <img
@@ -60,25 +68,31 @@ function CompanySection() {
           </SwiperSlide>
           <SwiperSlide>
             <a
-              href="#"
+              href="https://www.relyon.ai" // Use the real link
+              target="_blank"
+              rel="noopener noreferrer"
               className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
             >
               <img
-                src="https://github.com/assafch/davoice_webwake/blob/main/logos/Screenshot-2024-10-09-at-17.58.48.png?raw=true"
+                src="https://github.com/assafch/davoice_webwake/blob/main/logos/relyon_new.png?raw=true?raw=true"
                 alt="Wake Word Detection and Speech-to-Intent AI"
+                style={{ backgroundColor: '#f5f5f5' }} // #f5f5f5 White background for Sier
                 className="h-20 mx-auto"
               />
             </a>
           </SwiperSlide>
           <SwiperSlide>
             <a
-              href="#"
+              href="https://www.siertech.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
             >
               <img
-                src="https://github.com/assafch/davoice_webwake/blob/main/logos/Siernewlogo.avif?raw=true"
+                src="https://raw.githubusercontent.com/assafch/davoice_webwake/refs/heads/main/logos/Siernewlogo.avif?raw=true"
                 alt="Wake Word Detection and Speech-to-Intent AI"
                 className="h-20 mx-auto"
+                style={{ backgroundColor: '#ffffff' }} // White background for Sier
               />
             </a>
           </SwiperSlide>

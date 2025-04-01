@@ -12,6 +12,7 @@ import FAQSection from './FAQSection';
 import Footer from './Footer';
 import PlatformSelector from './PlatformSelector';
 import GithubHeadlines from './GithubHeadlines';
+import TechHighLightsSection from './TechHighLightsSection'
 
 function AppHome() {
   return (
@@ -20,6 +21,7 @@ function AppHome() {
       <HeroSection />
       <CompanySection />
       <PopupForm />
+      <TechHighLightsSection />
       <TestimonialsSection />
       <FeaturesSection />
       <WakeWordSection />
