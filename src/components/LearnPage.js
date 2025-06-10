@@ -13,19 +13,21 @@ import LearnSection from './LearnSection';
 import Footer from './Footer';
 import PlatformSelector from './PlatformSelector';
 import GithubHeadlines from './GithubHeadlines';
+import CookieConsent from './CookieConsent';
 
 function LearnPage() {
   return (
     <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen">
       <Navbar />
       <LearnSection />
+      <LearnSection />
       <PopupForm />
-      <TestimonialsSection />
       <GithubHeadlines />
       <PlatformSelector />
       <ContactSection />  
       <ContactForm />
       <Footer />
+      <CookieConsent />
     </div>
   );
 }

@@ -64,28 +64,28 @@ function Navbar() {
           </div>
 
           <div className="flex items-center">
-            <div className="hidden md:flex items-center space-x-4">
+            {/* <div className="hidden md:flex items-center space-x-4">
               <a href="/aaa" className="text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 text-sm font-medium">
                 Sign in
               </a>
               <a href="/aaa" className="bg-blue-600 dark:bg-blue-500 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-500 dark:hover:bg-blue-400 transition">
                 Get Started
               </a>
-            </div>
+            </div> */}
 
-            <button
+            {/* <button
               onClick={toggleDarkMode}
               className="ml-4 text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 focus:outline-none">
               {isDarkMode ? <FiMoon className="w-6 h-6" /> : <FiSun className="w-6 h-6" />}
-            </button>
+            </button> */}
 
-            <div className="md:hidden flex items-center">
+            {/* <div className="md:hidden flex items-center">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white dark:hover:text-gray-200 hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none">
                 {!isMenuOpen ? <FiMenu className="w-6 h-6" /> : <FiX className="w-6 h-6" />}
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
 

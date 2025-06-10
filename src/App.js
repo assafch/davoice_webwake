@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AppHome from './components/AppHome';
 import ContactUsPage from './components/ContactUsPage';
 import GithubPage from './components/GithubPage';
+import PrivacyPage from './components/PrivacyPage';
+import TermsPage from './components/TermsPage';
 import LearnPage from './components/LearnPage';
 import InTheNewsPage from './components/InTheNewsPage';
 import Docs from './components/Docs';
@@ -22,6 +24,8 @@ function App() {
         <Route path="/contact-us" element={<ContactUsPage />} caseSensitive={false} />
         <Route path="/wake-word" element={<LearnPage />} caseSensitive={false} />
         <Route path="/github" element={<GithubPage />} caseSensitive={false} />
+        <Route path="/terms" element={<TermsPage />} caseSensitive={false} />
+        <Route path="/privacy" element={<PrivacyPage />} caseSensitive={false} />
         <Route path="/docs" element={<Docs />} />
         <Route path="*" element={<ContactUsPage />} />
       </Routes>

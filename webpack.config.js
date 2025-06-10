@@ -76,6 +76,14 @@ module.exports = {
           ),
           to: '[name][ext]', // Copy WASM files to 'dist'
         },
+        {
+          from: 'public/robots.txt', // 👈 add this
+          to: 'robots.txt',
+        },
+        {
+          from: 'public/sitemap.xml', // 👈 add this
+          to: 'sitemap.xml',
+        },    
       ],
     }),
     new webpack.ContextReplacementPlugin(

@@ -35,11 +35,11 @@ const Footer = () => {
                     Github
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="#" className="hover:underline">
                     LinkedIn
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div>
@@ -48,12 +48,12 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="privacy" className="hover:underline">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="terms" className="hover:underline">
                     Terms &amp; Conditions
                   </a>
                 </li>
@@ -64,15 +64,15 @@ const Footer = () => {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2022{' '}
+            © 2025{' '}
             <a href="#" className="hover:underline">
               DaVoice™
             </a>
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-              {/* Facebook Icon */}
+            {/* <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+              { Facebook Icon }
               <svg
                 className="w-5 h-5"
                 fill="currentColor"
@@ -91,7 +91,7 @@ const Footer = () => {
               </svg>
             </a>
             <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-              {/* Instagram Icon */}
+              { Instagram Icon }
               <svg
                 className="w-5 h-5"
                 fill="currentColor"
@@ -128,7 +128,7 @@ const Footer = () => {
               </svg>
             </a>
             <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-              {/* Twitter Icon */}
+              { Twitter Icon }
               <svg
                 className="w-5 h-5"
                 fill="currentColor"
@@ -150,8 +150,8 @@ const Footer = () => {
                   1.84"
                 />
               </svg>
-            </a>
-            <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+            </a> */}
+            <a href="/github" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
               {/* GitHub Icon */}
               <svg
                 className="w-5 h-5"
@@ -182,8 +182,8 @@ const Footer = () => {
                 />
               </svg>
             </a>
-            <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-              {/* Dribbble Icon */}
+            {/* <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+              { Dribbble Icon }
               <svg
                 className="w-5 h-5"
                 fill="currentColor"
@@ -220,7 +220,7 @@ const Footer = () => {
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

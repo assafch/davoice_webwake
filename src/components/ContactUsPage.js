@@ -11,6 +11,7 @@ import FAQSection from './FAQSection';
 import Footer from './Footer';
 import PlatformSelector from './PlatformSelector';
 import GithubHeadlines from './GithubHeadlines';
+import CookieConsent from './CookieConsent';
 
 function ContactUsPage() {
   return (
@@ -27,6 +28,7 @@ function ContactUsPage() {
       <WakeWordSection />
       <FAQSection />
       <Footer />
+      <CookieConsent />
     </div>
   );
 }

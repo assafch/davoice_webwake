@@ -9,32 +9,27 @@ import TestimonialsSection from './TestimonialsSection';
 import FeaturesSection from './FeaturesSection';
 import WakeWordSection from './WakeWordSection';
 import FAQSection from './FAQSection';
+import LearnSection from './LearnSection';
 import Footer from './Footer';
 import PlatformSelector from './PlatformSelector';
 import GithubHeadlines from './GithubHeadlines';
-import TechHighLightsSection from './TechHighLightsSection'
 import CookieConsent from './CookieConsent';
 
-function AppHome() {
+function LearnPage() {
   return (
     <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen">
       <Navbar />
-      <HeroSection />
-      <CompanySection />
+      <LearnSection />
       <PopupForm />
-      <TechHighLightsSection />
       <TestimonialsSection />
-      <FeaturesSection />
-      <WakeWordSection />
       <GithubHeadlines />
       <PlatformSelector />
-      <FAQSection />
       <ContactSection />  
       <ContactForm />
-      <CookieConsent />
       <Footer />
+      <CookieConsent />
     </div>
   );
 }
 
-export default AppHome;
+export default LearnPage;
