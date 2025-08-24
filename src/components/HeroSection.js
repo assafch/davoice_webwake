@@ -8,17 +8,19 @@ function HeroSection() {
       <div className="container mx-auto px-9 py-16 grid lg:grid-cols-12 gap-8 items-center">
         <div className="lg:col-span-6 lg:col-start-2">
           <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-           App Evolution Wake Word & Speech-to-Intent AI
+           On-Device Application Evolution Full Voice-to-Voice AI.<br /> 
+           Wake Word, STT and TTS
           </h2>
           <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight mb-6">
-            Wake Word <br /> Speech-to-Intent <br /> On Any Device
+            Wake Word <br /> STT and TTS <br /> On Any Device
           </h1>
           <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl text-lg font-semibold">
-            Power your applications with advanced <strong>wake word</strong> detection and <strong>speech-to-intent</strong> processing.
+            Power your applications with Voice to Voice <strong>wake word</strong> detection and <strong>TTS and STT</strong> processing.
           </p>
           <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-8 space-y-2">
             <li>State-of-the-art <strong>wake word</strong> accuracy</li>
-            <li>Efficient <strong>speech-to-intent</strong> integration</li>
+            <li>The only human like on device <strong>Text-To-Speech</strong></li>
+            <li>The best of breed on-device <strong>Speech-To-Text</strong></li>
             <li>On-Device P&P High performance on any platform</li>
           </ul>
           <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
