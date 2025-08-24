@@ -22,15 +22,62 @@ function CompanySection() {
           }}
           className="mt-4"
         >
+
           <SwiperSlide>
             <a
-              href="https://www.hotelgenie.app" // Use the real link
+              href="https://www.vw.com" // Use the real link
               target="_blank"
               rel="noopener noreferrer"
+
               className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
             >
               <img
-                src="https://github.com/assafch/davoice_webwake/blob/main/logos/hotel_ginie_logo.png?raw=true"
+                src="https://github.com/assafch/davoice_webwake/blob/main/logos/volksawagen.jpg?raw=true"
+                alt="Voice to Voice AI, Wake Word Detection, Text to Speech and Speech-to-Text AI"
+                className="h-20 mx-auto"
+              />
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a
+              href="https://www.siemens.com" // Use the real link
+              target="_blank"
+              rel="noopener noreferrer"
+
+              className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
+            >
+              <img
+                src="https://github.com/assafch/davoice_webwake/blob/main/logos/1200px-Siemens_logo_rgb.jpg?raw=true"
+                alt="Voice to Voice AI, Wake Word Detection, Text to Speech and Speech-to-Text AI"
+                className="h-20 mx-auto"
+              />
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a
+              href="https://www.audi.com" // Use the real link
+              target="_blank"
+              rel="noopener noreferrer"
+
+              className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
+            >
+              <img
+                src="https://github.com/assafch/davoice_webwake/blob/main/logos/Logo_audi.jpg?raw=true"
+                alt="Voice to Voice AI, Wake Word Detection, Text to Speech and Speech-to-Text AI"
+                className="h-20 mx-auto"
+              />
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a
+              href="https://www.dentsucreative.com/" // Use the real link
+              target="_blank"
+              rel="noopener noreferrer"
+
+              className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
+            >
+              <img
+                src="https://github.com/assafch/davoice_webwake/blob/main/logos/densu.jpg?raw=true"
                 alt="Wake Word Detection and Speech-to-Intent AI"
                 className="h-20 mx-auto"
               />
@@ -47,6 +94,21 @@ function CompanySection() {
               <img
                 src="https://github.com/assafch/davoice_webwake/blob/main/logos/look_deep_logo.jpg?raw=true"
                 alt="Wake Word Detection and Speech-to-Intent AI"
+                className="h-20 mx-auto"
+              />
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a
+              href="https://www.vw.com" // Use the real link
+              target="_blank"
+              rel="noopener noreferrer"
+
+              className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
+            >
+              <img
+                src="https://github.com/assafch/davoice_webwake/blob/main/logos/volksawagen.jpg?raw=true"
+                alt="Voice to Voice AI, Wake Word Detection, Text to Speech and Speech-to-Text AI"
                 className="h-20 mx-auto"
               />
             </a>
@@ -81,6 +143,21 @@ function CompanySection() {
               />
             </a>
           </SwiperSlide>
+                              <SwiperSlide>
+            <a
+              href="https://www.audi.com" // Use the real link
+              target="_blank"
+              rel="noopener noreferrer"
+
+              className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
+            >
+              <img
+                src="https://github.com/assafch/davoice_webwake/blob/main/logos/Logo_audi.jpg?raw=true"
+                alt="Voice to Voice AI, Wake Word Detection, Text to Speech and Speech-to-Text AI"
+                className="h-20 mx-auto"
+              />
+            </a>
+          </SwiperSlide>
           <SwiperSlide>
             <a
               href="https://www.siertech.com"
@@ -93,6 +170,20 @@ function CompanySection() {
                 alt="Wake Word Detection and Speech-to-Intent AI"
                 className="h-20 mx-auto"
                 style={{ backgroundColor: '#ffffff' }} // White background for Sier
+              />
+            </a>
+          </SwiperSlide>
+          <SwiperSlide>
+            <a
+              href="https://www.hotelgenie.app" // Use the real link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-5 hover:text-gray-800 dark:hover:text-gray-200"
+            >
+              <img
+                src="https://github.com/assafch/davoice_webwake/blob/main/logos/hotel_ginie_logo.png?raw=true"
+                alt="Wake Word Detection and Speech-to-Intent AI"
+                className="h-20 mx-auto"
               />
             </a>
           </SwiperSlide>
