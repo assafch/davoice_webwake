@@ -7,16 +7,20 @@ function HeroSection() {
     <section className="bg-gray-100 dark:bg-gray-900">
       <div className="container mx-auto px-9 py-16 grid lg:grid-cols-12 gap-8 items-center">
         <div className="lg:col-span-6 lg:col-start-2">
-          <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-           On-Device Application Evolution Full Voice-to-Voice AI.<br /> 
-           Wake Word, STT and TTS
+           <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+           Enabling <strong>Voice-to-Voice AI</strong> for any Application on Any edge device.<br /> 
+          {/* What does it mean to enable your application with full Voice-to-Voice AI? <br />
+           1. Waking your application with a wake word.
+           2. Understanding human speech and converting it to text.
+           3. Processing the text with LLM and returning a text reply.
+           4. Transforming the text reply to human speech. */}
           </h2>
           <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight mb-6">
-            Wake Word <br /> STT and TTS <br /> On Any Device
+            Wake Words Speech-to-Text Text-to-Speech.<br /> On Any Device
           </h1>
-          <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl text-lg font-semibold">
-            Power your applications with Voice to Voice <strong>wake word</strong> detection and <strong>TTS and STT</strong> processing.
-          </p>
+          {/* <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl text-lg font-semibold">
+            Power your applications with Voice-to-Voice <strong>wake word</strong> detection, <strong>TTS and STT</strong> processing.
+          </p> */}
           <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-8 space-y-2">
             <li>State-of-the-art <strong>wake word</strong> accuracy</li>
             <li>The only human like on device <strong>Text-To-Speech</strong></li>
